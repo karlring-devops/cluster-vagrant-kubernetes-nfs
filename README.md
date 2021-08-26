@@ -19,7 +19,7 @@ This build will default ( memory = 2048, cpus = 2) for each node. I suggest you 
           5) type:  vagrant up <hostname_to_change>
           6) repeat for other servers.
 
-On iMac i7(late 2013),32Gib RAM (1600mhz), 250Gib SSD the following seems quite stable and fast with a full stack ELASTIC_ECK and JENKINS from my other repos. The Average iMac CPU Load is 25-30%, Memory usage is 25Gib RAM, when the full k8s-ECK stack is idle but fully active:
+On iMac i7(late 2013),32Gib RAM (1600mhz), 250Gib SSD the following seems quite stable and fast with a full stack [ELASTIC-ECK](https://github.com/karlring-devops/kubernetes-eck), [JENKINS-NFS](https://github.com/karlring-devops/jenkins-kubernetes-pod-nfs), and [KUBERNETES-DASHBOARD](https://github.com/karlring-devops/kubernetes-dashboard) from my other repos. The Average iMac CPU Load is 25-30%, Memory usage is 25Gib RAM, when the full k8s-ECK stack is idle but fully active:
 
            kmaster1   cpu2/4096ram
            kube1      cpu2/5192ram
