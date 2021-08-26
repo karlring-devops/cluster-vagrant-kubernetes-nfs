@@ -1,5 +1,23 @@
 # Local Kubernetes Cluster Example
 
+-- Adapted from Jeff Geerling (geerlingguy@github.com).
+-- Includes: 
+
+           - Vagrantfile - builds nodes [ kmaster1,kube1,kube2,nfsmaster ]
+           - Ansible Roles ( from Jeff Geerling )
+           + NFS Server config in Vagrantfile,inventory
+
+-- Manage Node CPU / RAM 
+
+          1) cd to Vagrantfile directory
+          2) type:  vagrant up    #/-- can be either first execution or after you "vagrant halt" the cluster.  
+          3) type:  vagrant halt <hostname_to_change>
+          4) update the CPU/RAM in Vagrantfile you want
+          5) type:  vagrant up <hostname_to_change>
+          6) repeat for other servers.
+
+# README.md from Jeff Geerling (geerlingguy@github.com)
+
 This example demonstrates the setup of a single-master, multi-node Kubernetes cluster, running locally in three VMs. You can run the Ansible playbook against any three servers, but this example includes a Vagrantfile, which allows Vagrant to automatically build three VirtualBox VMs and then runs the playbook agains them automatically.
 
 ## Usage
