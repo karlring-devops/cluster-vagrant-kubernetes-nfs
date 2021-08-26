@@ -7,7 +7,10 @@
            - Ansible Roles ( from Jeff Geerling )
            + NFS Server config in Vagrantfile,inventory
 
--- Manage Node CPU / RAM 
+## Manage Node CPU / RAM 
+
+This build will default ( memory = 2048, cpus = 2) for each node. I suggest you just run "vagrant up" with the defaults. Then, if you want to change Node CPU/RAM do the following steps.
+
 
           1) cd to Vagrantfile directory
           2) type:  vagrant up    #/-- can be either first execution or after you "vagrant halt" the cluster.  
@@ -15,6 +18,14 @@
           4) update the CPU/RAM in Vagrantfile you want
           5) type:  vagrant up <hostname_to_change>
           6) repeat for other servers.
+
+On iMac i7(late 2013),32Gib RAM (1600mhz), 250Gib SSD the following seems quite stable (with full elastic_eck and jenkins from my other repos.):
+
+           kmaster1   cpu2/4096ram
+           kube1      cpu2/5192ram
+           kube2      cpu2/5192ram
+           kube3      cpu2/5192ram
+           nfsmaster  cpu1/1024ram
 
 # README.md from Jeff Geerling (geerlingguy@github.com)
 
