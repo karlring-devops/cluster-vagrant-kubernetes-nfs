@@ -21,8 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     { :name => "kmaster1", :ip => "192.168.7.2" },
     { :name => "kube1", :ip => "192.168.7.3" },
     { :name => "kube2", :ip => "192.168.7.4" },
+    { :name => "kube3", :ip => "192.168.7.5" },
     { :name => "nfsmaster", :ip => "192.168.7.11" }
-
   ]
 
   # Configure each of the VMs.
